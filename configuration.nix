@@ -74,7 +74,7 @@
   users.users."anno" = {
     isNormalUser = true;
     description = "ANNO";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
@@ -102,6 +102,11 @@
     nvidiaPersistenced = true;
   };
 
+# Environment variables for npm packages in home directory
+   environment.sessionVariables = {
+     PATH = [ "$HOME/.npm-packages/bin" ];
+  };
+
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
      inputs.voxtype.packages.${pkgs.system}.vulkan
@@ -112,6 +117,7 @@
      brave
      vscode
      qbittorrent
+     nodejs
      (discord.override {
        withVencord = true;
      })
