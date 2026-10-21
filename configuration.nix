@@ -107,6 +107,9 @@
      PATH = [ "$HOME/.npm-packages/bin" ];
   };
 
+# Enable nix-ld to execute standard unpatched binaries
+  programs.nix-ld.enable = true;
+
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
      inputs.voxtype.packages.${pkgs.system}.vulkan
