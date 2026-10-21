@@ -86,7 +86,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # NVIDIA GeForce RTX 5060 Ti Configuration
+# NVIDIA GeForce RTX 5060 Ti Configuration
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -99,16 +99,7 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
-  };
-
-  systemd.services.nvidia-persistenced = {
-    description = "NVIDIA Persistence Daemon";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "forking";
-      ExecStart = "${config.hardware.nvidia.package.bin}/bin/nvidia-persistenced --user root";
-      Restart = "always";
-    };
+    nvidiaPersistenced = true;
   };
 
   # List packages installed in system profile.
