@@ -319,13 +319,13 @@
       "locked": {
         "lastModified": 1792541686,
         "narHash": "sha256-KQublavM96AQLx9QGYwW2nNBU8VDj1UjFQdCtLzV99g=",
-        "owner": "aethctl",
+        "owner": "ryoku-dev",
         "repo": "Ryoku-on-NixOS",
         "rev": "97fbe61627dd39bed0c42e863c671a3435690a7f",
         "type": "github"
       },
       "original": {
-        "owner": "aethctl",
+        "owner": "ryoku-dev",
         "ref": "main",
         "repo": "Ryoku-on-NixOS",
         "type": "github"

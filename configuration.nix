@@ -109,10 +109,12 @@
      wl-clipboard
      hyprpolkitagent
      git
-     discord
      brave
      vscode
      qbittorrent
+     (discord.override {
+       withVencord = true;
+     })
   ];
 
   system.stateVersion = "26.05";

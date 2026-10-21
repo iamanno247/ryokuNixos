@@ -1,7 +1,7 @@
 {
   inputs = {
     ryoku = {
-      url = "github:aethctl/Ryoku-on-NixOS/main";
+      url = "github:ryoku-dev/Ryoku-on-NixOS/main";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     voxtype.url = "github:peteonrails/voxtype";
